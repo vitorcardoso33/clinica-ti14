@@ -1,0 +1,33 @@
+:root { --bg:#f4f7f8; --fg:#1c2b33; --card:#fff; --main:#0f766e; --line:#dbe3e6; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#10191d; --fg:#e6eef0; --card:#182429; --main:#2dd4bf; --line:#2a3a41; }
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--fg); }
+header { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding:14px 24px; background:var(--main); color:#fff; }
+h1 { margin:0; font-size:1.3rem; }
+nav button { background:transparent; color:#fff; border:1px solid #fff8; margin-left:6px; }
+nav button.on { background:#fff; color:#0f766e; }
+main { max-width:960px; margin:0 auto; padding:20px; }
+button { padding:8px 14px; border:0; border-radius:8px; background:var(--main); color:#fff; cursor:pointer; font:inherit; }
+button:disabled { opacity:.4; cursor:default; }
+input, select { padding:9px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); font:inherit; }
+#msg { padding:10px 14px; border-radius:8px; }
+#msg.erro { background:#fee2e2; color:#991b1b; }
+#msg.ok { background:#dcfce7; color:#166534; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; }
+.card small { display:block; opacity:.7; } .card b { font-size:1.5rem; }
+.bars { list-style:none; padding:0; }
+.bars li { position:relative; display:flex; justify-content:space-between; padding:8px 10px; margin:6px 0; background:var(--card); border-radius:8px; overflow:hidden; }
+.bars i { position:absolute; left:0; top:0; bottom:0; background:var(--main); opacity:.25; }
+.bars span, .bars em { position:relative; font-style:normal; }
+.filtros, form { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+.filtros input { flex:1; min-width:220px; }
+.scroll { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; background:var(--card); border-radius:8px; }
+th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); }
+.tag { padding:2px 8px; border-radius:99px; font-size:.8rem; background:var(--line); }
+.tag.Realizada { background:#dcfce7; color:#166534; } .tag.Agendada { background:#dbeafe; color:#1e40af; } .tag.Cancelada { background:#fee2e2; color:#991b1b; }
+.pag { display:flex; gap:12px; align-items:center; justify-content:center; margin:14px 0; }
+dialog { border:1px solid var(--line); border-radius:12px; background:var(--card); color:var(--fg); max-width:480px; width:90%; }
